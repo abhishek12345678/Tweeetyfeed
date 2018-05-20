@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sv"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f9fbfc">
+
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:src="@drawable/background1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:id="@+id/b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/iv"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="23dp"
+            android:onClick="tweetyfeed"
+            android:src="@drawable/tweetyfeed" />
+
+        <TextView
+            android:id="@+id/b2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:textColor="#f1f3f5"
+            android:textSize="20dp"
+            android:layout_alignBottom="@+id/iv"
+            android:layout_alignRight="@+id/home"
+            android:layout_alignEnd="@+id/home"
+            android:layout_marginBottom="29dp" />
+
+        <Button
+            android:id="@+id/home"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/b1"
+            android:layout_toEndOf="@+id/b1"
+            android:layout_toRightOf="@+id/b1"
+            android:onClick="home"
+            android:text="HOME"
+            android:textColor="#123"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/About"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/home"
+            android:layout_alignBottom="@+id/home"
+            android:layout_toEndOf="@+id/b2"
+            android:layout_toRightOf="@+id/b2"
+            android:onClick="about"
+            android:text="ABOUT US"
+            android:textColor="#123"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/service"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="services"
+            android:text="SERVICES"
+            android:textColor="#123"
+            android:textSize="15dp"
+            android:layout_alignBaseline="@+id/About"
+            android:layout_alignBottom="@+id/About"
+            android:layout_alignRight="@+id/faq"
+            android:layout_alignEnd="@+id/faq" />
+
+        <Button
+            android:id="@+id/blog"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="blog"
+            android:text="BLOG"
+            android:textColor="#123"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/About"
+            android:layout_toStartOf="@+id/About" />
+
+        <Button
+            android:id="@+id/contact"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/blog"
+            android:layout_alignBottom="@+id/blog"
+            android:layout_alignLeft="@+id/About"
+            android:layout_alignStart="@+id/About"
+            android:onClick="contactus"
+            android:text="CONTACT US"
+            android:textColor="#123"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/faq"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/contact"
+            android:layout_alignBottom="@+id/contact"
+            android:layout_toEndOf="@+id/contact"
+            android:layout_toRightOf="@+id/contact"
+            android:onClick="faq"
+            android:text="FAQ"
+            android:textColor="#123"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/portfoli"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="portfoli"
+            android:text="PORTFOLI"
+            android:textColor="#123"
+            android:textSize="15dp"
+            android:layout_below="@+id/blog"
+            android:layout_alignLeft="@+id/blog"
+            android:layout_alignStart="@+id/blog"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp" />
+
+        <Button
+            android:id="@+id/gallery"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="gallery"
+            android:text="GALLERY"
+            android:textColor="#123"
+            android:textSize="15dp"
+            android:layout_below="@+id/contact"
+            android:layout_toRightOf="@+id/portfoli"
+            android:layout_toEndOf="@+id/portfoli" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/li2"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_below="@+id/iv"
+            android:layout_alignRight="@+id/service"
+            android:layout_alignEnd="@+id/service">
+
+         <ImageView
+             android:layout_width="257dp"
+             android:layout_height="215dp"
+             android:id="@+id/iv4"
+             android:src="@drawable/aboutus"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv1"
+                android:text="Our Approach"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv2"
+                android:text="You could also call this heading
+ Our vision. This is the place to talk about
+what drives you and your business
+and what's unique about your process.
+What you write here should be something
+ distinct and interesting about your
+ business that sets it apart from
+ others in the same industry."
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv3"
+                android:text="Our Story"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv4"
+                android:text="Every business has a beginning, and
+ this is where you talk about yours.
+  People want to know what opportunity
+ you saw or how your passion led to
+  the creation of something new.
+ Talk about your roots--people
+  wanna know you have some."
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv5"
+                android:text="Meet My Team"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv6"
+                android:text="Write something about the people
+who make your business go or your
+philosophy behind customer service.
+Why? Because people want to know who
+they're doing business with. It's a human thing."
+                android:layout_marginBottom="10dp"/>
+
+            <ImageView
+                android:layout_width="257dp"
+                android:layout_height="215dp"
+                android:id="@+id/iv5"
+                android:src="@drawable/team1"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv7"
+                android:text="Regan McCook"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv8"
+                android:text="Founder CEO"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv9"
+                android:text="Include a short bio with an
+                interesting fact about the person."
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageView
+                android:layout_width="257dp"
+                android:layout_height="215dp"
+                android:id="@+id/iv6"
+                android:src="@drawable/team2"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv11"
+                android:text="Eric Teagan"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv12"
+                android:text="Vice President"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv13"
+                android:text="Include a short bio with an
+                interesting fact about the person."
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageView
+                android:layout_width="257dp"
+                android:layout_height="215dp"
+                android:id="@+id/iv7"
+                android:src="@drawable/team2"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv14"
+                android:text="Timothy Barrett"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv15"
+                android:text="CFO"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv16"
+                android:text="Include a short bio with an
+                interesting fact about the person."
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv17"
+                android:text="Next Steps..."
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvv18"
+                android:text="This is should be a prospective customer's
+                number one call to action, e.g.,
+                requesting a quote or perusing
+                your product catalog."
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/b3"
+                android:text="Call to Action."
+                android:textSize="20dp"
+                android:background="#daf10f31"
+                android:onClick="calltoAction"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/li1"
+                android:orientation="vertical"
+                android:background="#3f4143">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv13"
+                    android:text="CONTACT US"
+                    android:textColor="#fafbfc"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv14"
+                    android:text="Email"
+                    android:textColor="#0d78e2"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/b4"
+                    android:text="swabhimansingh676@gamil.com"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:textSize="23dp"
+                    android:textColor="#1f5579"
+                    android:onClick="email"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/b5"
+                    android:text="LIKE US ON FB"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#4696e6"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/b6"
+                    android:text="http://tweetyfeed.com"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:textSize="23dp"
+                    android:textColor="#1f5579"
+                    android:onClick="facebook"
+                    android:layout_marginBottom="10dp"/>
+
+                <Button
+                    android:id="@+id/b2s"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv2"
+                    android:onClick="getStarted"
+                    android:text="GET STARTED->"
+                    android:textColor="#f1f3f5"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/homes"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/b1"
+                    android:layout_toEndOf="@+id/b1"
+                    android:layout_toRightOf="@+id/b1"
+                    android:onClick="home"
+                    android:text="HOME"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/Abouts"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/home"
+                    android:layout_alignBottom="@+id/home"
+                    android:layout_toEndOf="@+id/b2"
+                    android:layout_toRightOf="@+id/b2"
+                    android:onClick="about"
+                    android:text="ABOUT US"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/services"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/About"
+                    android:layout_alignBottom="@+id/About"
+                    android:layout_toEndOf="@+id/About"
+                    android:layout_toRightOf="@+id/About"
+                    android:onClick="services"
+                    android:text="SERVICES"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/blogs"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv1"
+                    android:layout_alignEnd="@+id/home"
+                    android:layout_alignRight="@+id/home"
+                    android:layout_marginBottom="12dp"
+                    android:onClick="blog"
+                    android:text="BLOG"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/contacts"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/blog"
+                    android:layout_alignBottom="@+id/blog"
+                    android:layout_alignLeft="@+id/About"
+                    android:layout_alignStart="@+id/About"
+                    android:onClick="contactus"
+                    android:text="CONTACT US"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/faqs"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/contact"
+                    android:layout_alignBottom="@+id/contact"
+                    android:layout_toEndOf="@+id/contact"
+                    android:layout_toRightOf="@+id/contact"
+                    android:onClick="faq"
+                    android:text="FAQ"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/portfolis"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/service"
+                    android:layout_alignBottom="@+id/service"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:onClick="portfoli"
+                    android:text="PORTFOLI"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/gallerys"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/faq"
+                    android:layout_alignBottom="@+id/faq"
+                    android:layout_toEndOf="@+id/faq"
+                    android:layout_toRightOf="@+id/faq"
+                    android:onClick="gallery"
+                    android:text="GALLERY"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv15"
+                    android:text="copyrightC2017 TweeetyFeed"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#4696e6"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+

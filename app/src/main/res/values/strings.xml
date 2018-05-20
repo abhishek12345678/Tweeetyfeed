@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tweeetyfeed</string>
+    <string name="email">email</string>
+    <string name="facebook">facebook</string>
+</resources>

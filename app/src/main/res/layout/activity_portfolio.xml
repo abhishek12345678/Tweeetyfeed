@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sv"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f9fbfc">
+
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:src="@drawable/background1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:id="@+id/b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/iv"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="23dp"
+            android:onClick="tweetyfeed"
+            android:src="@drawable/tweetyfeed" />
+
+        <TextView
+            android:id="@+id/b2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Portfolio"
+            android:textColor="#f1f3f5"
+            android:textSize="20dp"
+            android:layout_alignBottom="@+id/iv"
+            android:layout_alignRight="@+id/home"
+            android:layout_alignEnd="@+id/home"
+            android:layout_marginBottom="29dp" />
+
+        <Button
+            android:id="@+id/home"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="home"
+            android:text="HOME"
+            android:textColor="#123"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/b1"
+            android:layout_toEndOf="@+id/b1" />
+
+        <Button
+            android:id="@+id/About"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/home"
+            android:layout_alignBottom="@+id/home"
+            android:layout_toEndOf="@+id/b2"
+            android:layout_toRightOf="@+id/b2"
+            android:onClick="about"
+            android:text="ABOUT US"
+            android:textColor="#123"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/service"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="services"
+            android:text="SERVICES"
+            android:textColor="#123"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/faq"
+            android:layout_alignEnd="@+id/faq" />
+
+        <Button
+            android:id="@+id/blog"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="blog"
+            android:text="BLOG"
+            android:textColor="#123"
+            android:textSize="15dp"
+            android:layout_alignTop="@+id/b1"
+            android:layout_toLeftOf="@+id/About"
+            android:layout_toStartOf="@+id/About"
+            android:layout_marginTop="13dp" />
+
+        <Button
+            android:id="@+id/contact"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/blog"
+            android:layout_alignBottom="@+id/blog"
+            android:layout_alignLeft="@+id/About"
+            android:layout_alignStart="@+id/About"
+            android:onClick="contactus"
+            android:text="CONTACT US"
+            android:textColor="#123"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/faq"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/contact"
+            android:layout_alignBottom="@+id/contact"
+            android:layout_toEndOf="@+id/contact"
+            android:layout_toRightOf="@+id/contact"
+            android:onClick="faq"
+            android:text="FAQ"
+            android:textColor="#123"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/portfoli"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="portfoli"
+            android:text="PORTFOLI"
+            android:textColor="#123"
+            android:textSize="15dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_alignBottom="@+id/b1"
+            android:layout_alignLeft="@+id/blog"
+            android:layout_alignStart="@+id/blog" />
+
+        <Button
+            android:id="@+id/gallery"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="gallery"
+            android:text="GALLERY"
+            android:textColor="#123"
+            android:textSize="15dp"
+            android:layout_alignBaseline="@+id/portfoli"
+            android:layout_alignBottom="@+id/portfoli"
+            android:layout_toRightOf="@+id/portfoli"
+            android:layout_toEndOf="@+id/portfoli" />
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lii"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@+id/iv"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivv1"
+                android:src="@drawable/backward"
+                style="?android:attr/buttonBarButtonStyle"
+                android:onClick="backwad"/>
+
+            <ImageView
+                android:layout_width="256dp"
+                android:layout_height="265dp"
+                android:id="@+id/ivv2"
+                android:src="@drawable/portfolio1a"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ivv3"
+                android:src="@drawable/forward"
+                style="?android:attr/buttonBarButtonStyle"
+                android:onClick="forwad"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lii1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="252dp"
+            android:layout_below="@+id/iv"
+            android:layout_centerHorizontal="true"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ttt"
+                android:text="Product / Service Categories"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ttt1"
+            android:text="Project Name"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ttt2"
+            android:text="Talk about this portfolio piece--who
+            you did it for and why, plus what the
+results were (potential customers
+ love to hear about real-world results).
+Discuss any unique facets of the
+project--was it accomplished under
+ impossible deadline?--and show how your
+business went above and beyond to
+make the impossible happen."
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/lii2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignEnd="@+id/faq"
+                android:layout_alignRight="@+id/faq"
+                android:layout_alignTop="@+id/lii1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ivv4"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/backward"
+                    android:onClick="backward"/>
+
+                <ImageView
+                    android:id="@+id/ivv5"
+                    android:layout_width="214dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/portfolio2a" />
+
+                <ImageButton
+                    android:id="@+id/ivv6"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/forward"
+                    android:onClick="forward"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lii5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="252dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/ttt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Project Name"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ttt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Product / Service Categories"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ttt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Talk about this portfolio piece--who
+                    you did it for and why, plus what the
+        results were (potential customers
+         love to hear about real-world results).
+        Discuss any unique facets of the
+        project--was it accomplished under
+         impossible deadline?--and show how your
+        business went above and beyond to
+        make the impossible happen."
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/li1"
+                android:orientation="vertical"
+                android:background="#3f4143">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv13"
+                    android:text="CONTACT US"
+                    android:textColor="#fafbfc"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv14"
+                    android:text="Email"
+                    android:textColor="#0d78e2"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/b4"
+                    android:text="swabhimansingh676@gamil.com"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:textSize="23dp"
+                    android:textColor="#1f5579"
+                    android:onClick="email"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/b5"
+                    android:text="LIKE US ON FB"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#4696e6"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/b6"
+                    android:text="http://tweetyfeed.com"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:textSize="23dp"
+                    android:textColor="#1f5579"
+                    android:onClick="facebook"
+                    android:layout_marginBottom="10dp"/>
+
+                <Button
+                    android:id="@+id/b2s"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv2"
+                    android:onClick="getStarted"
+                    android:text="GET STARTED->"
+                    android:textColor="#f1f3f5"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/homes"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/b1"
+                    android:layout_toEndOf="@+id/b1"
+                    android:layout_toRightOf="@+id/b1"
+                    android:onClick="home"
+                    android:text="HOME"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/Abouts"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/home"
+                    android:layout_alignBottom="@+id/home"
+                    android:layout_toEndOf="@+id/b2"
+                    android:layout_toRightOf="@+id/b2"
+                    android:onClick="about"
+                    android:text="ABOUT US"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/services"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/About"
+                    android:layout_alignBottom="@+id/About"
+                    android:layout_toEndOf="@+id/About"
+                    android:layout_toRightOf="@+id/About"
+                    android:onClick="services"
+                    android:text="SERVICES"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/blogs"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv1"
+                    android:layout_alignEnd="@+id/home"
+                    android:layout_alignRight="@+id/home"
+                    android:layout_marginBottom="12dp"
+                    android:onClick="blog"
+                    android:text="BLOG"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/contacts"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/blog"
+                    android:layout_alignBottom="@+id/blog"
+                    android:layout_alignLeft="@+id/About"
+                    android:layout_alignStart="@+id/About"
+                    android:onClick="contactus"
+                    android:text="CONTACT US"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/faqs"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/contact"
+                    android:layout_alignBottom="@+id/contact"
+                    android:layout_toEndOf="@+id/contact"
+                    android:layout_toRightOf="@+id/contact"
+                    android:onClick="faq"
+                    android:text="FAQ"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/portfolis"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/service"
+                    android:layout_alignBottom="@+id/service"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:onClick="portfoli"
+                    android:text="PORTFOLI"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/gallerys"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/faq"
+                    android:layout_alignBottom="@+id/faq"
+                    android:layout_toEndOf="@+id/faq"
+                    android:layout_toRightOf="@+id/faq"
+                    android:onClick="gallery"
+                    android:text="GALLERY"
+                    android:textColor="#123"
+                    android:textSize="15dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv15"
+                    android:text="copyrightC2017 TweeetyFeed"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="#4696e6"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+    </ScrollView>
